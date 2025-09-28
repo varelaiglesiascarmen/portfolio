@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="author" content="Carmen Varela Iglesias">
+  <meta name="description"
+    content="Portfolio profesional de Carmen Varela Iglesias. Diseño, proyectos y trayectoria." />
+  <!--para que sea responsive-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords"
+    content="web devoloper, portfolio, carmen varela iglesias, junior web developer, front end developer, proyectos, diseño, estudios, experiencia">
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="icon" href="ruta/logo">
+  <script src="./assets/js/main.js" defer></script>
+  <title>Carmen Varela Iglesias | Porfessional Portfolio</title>
+
+</head>
+
+<body>
+  <!--call to navbar-->
+  <div id="navbar"></div>
+
+  <main id="hero">
+    <div class="overlay">
+      <h1>Carmen Varela <br>Iglesias | <br>Professional Portfolio</h1>
+    </div>
+
+    <div class="interactiveButtons">
+      <div class="interactiveMe">
+        <p class="frameMe">Who I Am ?</p>
+        <button onclick="showInfo('aboutMe')" aria-label="Show About Me information"></button>
+      </div>
+      <div class="interactiveProjects">
+        <p class="frameProjects">What I Do?</p>
+        <button onclick="showInfo('projects')" aria-label="Show Projects information"></button>
+      </div>
+      <div class="interactiveStudies">
+        <p class="frameStudies">What did I study?</p>
+        <button onclick="showInfo('studies')" aria-label="Show Studies information"></button>
+      </div>
+    </div>
+
+    <!-- show info "Who i am?" "What i do?" "What did i study?" -->
+    <div id="infoContainer"></div>
+
+  </main>
+
+  <!--call to footer-->
+  <div id="footer"></div>
+
+</body>
+
+</html>
