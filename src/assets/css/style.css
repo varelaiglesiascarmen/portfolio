@@ -1,11 +1,23 @@
-/* basic reset*/
+                    /* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* NAVBAR */
+                    /* FONTS */
+body, footer {
+  font-family: 'Lexend Deca', sans-serif; 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, p {
+  font-family: 'Lexend Deca', sans-serif; 
+}
+
+                    /* NAVBAR */
 .navbar {
   background-color: rgb(217, 217, 217, 0.3); 
   color: #CEFFD9; 
@@ -94,12 +106,46 @@
   font-size: 3rem; 
 }
 
-/* INDEX */
+                    /* INDEX */
 
 body {
   height: 100vh;
   background: url('../img/png/pngWeb/meGlasses.jpg') no-repeat center center;
   background-size: cover;
+}
+
+/* Line */
+.line {
+  width: 90%; /* La línea ocupa el 60% del ancho total */
+  height: 5px; /* Grosor de la línea */
+  background-color: rgb(141, 141, 141, 0.69); /* Color de la línea */
+  position: absolute; /* Posiciona la línea dentro del contenedor */
+  top: 0; /* Coloca la línea en la parte superior del contenedor */
+  left: 5%; /* Deja un 20% libre a ambos lados */
+}
+
+.line::before,
+.line::after {
+  content: ''; /* Crea los elementos pseudo */
+  width: 5px; /* Grosor de las pestañitas */
+  height: 15px; /* Altura de las pestañitas */
+  background-color: rgb(141, 141, 141, 0.69); /* Color de las pestañitas */
+  position: absolute;
+}
+
+.line::before {
+  left: 0; /* Posiciona la pestañita al inicio de la línea */
+  top: 5px; /* Coloca la pestañita justo debajo de la línea */
+}
+
+.line::after {
+  right: 0; /* Posiciona la pestañita al final de la línea */
+  top: 5px; /* Coloca la pestañita justo debajo de la línea */
+}
+
+.overlay {
+  position: relative; /* Necesario para posicionar la línea roja dentro del contenedor */
+  margin-top: 150px; /* Ajusta el margen para que no se solape con el navbar */
 }
 
 .overlay h1 {
@@ -184,3 +230,55 @@ body {
   height: 120px;
 }
 
+                    /* FOOTER */
+/* FOOTER */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Centra el texto y la línea */
+  justify-content: center;
+  padding: 20px 40px; /* Espaciado interno */
+  color: #FFE6CB; /* Color del texto */
+  font-size: 1.5rem; /* Tamaño de la fuente */
+  position: relative; /* Necesario para posicionar la línea dentro del footer */
+}
+
+footer p {
+  position: absolute; 
+  bottom: 40px; 
+  left: 200px; 
+  margin: 0; 
+  text-align: left; 
+  font-size: 1.7rem; 
+  color: #FFE6CB; 
+}
+
+/* Línea del footer */
+.lineFooter {
+  width: 90%; /* La línea ocupa el 60% del ancho total */
+  height: 5px; /* Grosor de la línea */
+  background-color: rgb(141, 141, 141, 0.69); /* Color de la línea */
+  position: absolute; /* Posiciona la línea dentro del contenedor */
+  top: 0; /* Coloca la línea en la parte superior del contenedor */
+  left: 5%; /* Centra la línea horizontalmente */
+}
+
+/* Pestañitas de la línea */
+.lineFooter::before,
+.lineFooter::after {
+  content: ''; /* Crea los elementos pseudo */
+  width: 5px; /* Grosor de las pestañitas */
+  height: 15px; /* Altura de las pestañitas */
+  background-color: rgb(141, 141, 141, 0.69); /* Color de las pestañitas */
+  position: absolute;
+}
+
+.lineFooter::before {
+  left: 0; /* Posiciona la pestañita al inicio de la línea */
+  top: -15px; /* Coloca la pestañita justo encima de la línea */
+}
+
+.lineFooter::after {
+  right: 0; /* Posiciona la pestañita al final de la línea */
+  top: -15px; /* Coloca la pestañita justo encima de la línea */
+}

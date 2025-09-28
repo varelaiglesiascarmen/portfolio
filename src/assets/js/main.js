@@ -32,13 +32,13 @@ function showInfo(section) {
   // Define el contenido según la sección
   switch (section) {
     case 'aboutMe':
-      content = '<h2>About Me</h2><p>Información sobre quién eres...</p>';
+      content = '<h2>LOREM</h2>';
       break;
     case 'projects':
-      content = '<h2>Projects</h2><p>Información sobre tus proyectos...</p>';
+      content = '<h2>LOREM</h2>';
       break;
     case 'studies':
-      content = '<h2>Studies</h2><p>Información sobre tus estudios...</p>';
+      content = '<h2>LOREM</h2>';
       break;
     default:
       content = '<p>Sección no encontrada.</p>';
