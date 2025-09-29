@@ -4,7 +4,7 @@ function toggleMenu() {
   const navbar = document.querySelector('.navbar');
   
   menu.classList.toggle('active');
-  navbar.classList.toggle('menu-open'); // Añade o quita la clase al navbar
+  navbar.classList.toggle('menu-open'); 
 }
 
 // Content Loaded
@@ -29,7 +29,7 @@ function showInfo(section) {
   const infoContainer = document.getElementById('infoContainer');
   let content = '';
 
-  // Define el contenido según la sección
+  // interactive div
   switch (section) {
     case 'aboutMe':
       content = '<h2>LOREM ME</h2>';
@@ -44,6 +44,5 @@ function showInfo(section) {
       content = '<p>Sección no encontrada.</p>';
   }
 
-  // Actualiza el contenido del contenedor
   infoContainer.innerHTML = content;
 }
