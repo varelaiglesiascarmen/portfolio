@@ -66,4 +66,4 @@ portfolio/
 
 ## 📄 License
 
-This project is licensed under the [MIT](LICENSE) license.
+This project is licensed under the [CREATIVE COMMONS](LICENSE) license.
