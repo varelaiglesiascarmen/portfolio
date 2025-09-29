@@ -1,4 +1,4 @@
-![Preview Portfolio](/src/assets/img/png/pngReadme/VarelaIglesiasCarmen_Portfolio.png)
+![Preview Portfolio](src/assets/img/png/pngReadme/VarelaIglesiasCarmen_Portfolio.jpg)
 
 # Professional Portfolio - Carmen Varela Iglesias
 
