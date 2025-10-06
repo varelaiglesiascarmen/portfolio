@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "![Preview Portfolio](src/assets/img/png/pngReadme/VarelaIglesiasCarmen_Portfolio.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/varelaiglesiascarmen/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/varelaiglesiascarmen/portfolio/issues"
+  },
+  "homepage": "https://github.com/varelaiglesiascarmen/portfolio#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  }
+}
