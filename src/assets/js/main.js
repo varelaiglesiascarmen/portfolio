@@ -1,4 +1,4 @@
-// navbar
+// llamada a componentes
 function toggleMenu() {
   const menu = document.querySelector('.navbar-menu');
   const navbar = document.querySelector('.navbar');
@@ -25,24 +25,34 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // show info "Who i am?" "What i do?" "What did i study?"
-function showInfo(section) {
+async function showInfo(section) {
   const infoContainer = document.getElementById('infoContainer');
-  let content = '';
+  let file = '';
 
-  // interactive div
   switch (section) {
     case 'aboutMe':
-      content = '<h2>LOREM ME</h2>';
+      file = 'C:\Users\carva\Desktop\portfolio\src\components\aboutMe.html'; 
       break;
     case 'projects':
-      content = '<h2>LOREM Projects</h2>';
+      file = '../../components/projects.html';
       break;
     case 'studies':
-      content = '<h2>LOREM Studies</h2>';
+      file = '../../components/studies.html';
       break;
     default:
-      content = '<p>Sección no encontrada.</p>';
+      infoContainer.innerHTML = '<p>Sección no encontrada.</p>';
+      return;
   }
 
-  infoContainer.innerHTML = content;
+  try {
+    const response = await fetch(file);
+    if (!response.ok) throw new Error('Error al cargar ' + file);
+
+    const html = await response.text();
+    infoContainer.innerHTML = html;
+    infoContainer.scrollIntoView({ behavior: 'smooth' });
+  } catch (error) {
+    console.error(error);
+    infoContainer.innerHTML = '<p>No se pudo cargar el contenido.</p>';
+  }
 }

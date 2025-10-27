@@ -5,6 +5,18 @@
   box-sizing: border-box;
 }
 
+/* Repara el grid de Bootstrap */
+.row {
+  margin-right: calc(-.5 * var(--bs-gutter-x));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+
+[class*="col-"] {
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5);
+}
+
+
                     /* FONTS */
 * {
   font-family: 'Lexend Deca', sans-serif;
@@ -44,6 +56,7 @@
 
 .hamburguer:hover {
   transform: scale(1.2); 
+  color: #39FF14;
 }
 
 .navbar.menu-open .hamburguer {
@@ -72,8 +85,6 @@
 
 .navbar-menu ul {
   list-style: none; 
-  padding: 0;
-  margin: 0;
 }
 
 .navbar-menu li {
@@ -103,10 +114,11 @@
 
                     /* INDEX */
 
-body {
+body .homepageBody{
   position: relative;
   height: 100vh;
   background-color: #000; 
+  overflow: hidden; 
 }
 
 body::before {
@@ -182,17 +194,11 @@ body::after {
 }
 
 .interactiveButtons {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  position: relative;
   width: 100%;
-  padding: 0 5%;
-  position: relative; 
+  height: 400px;
   bottom: 50px;
-}
-
-.interactiveButtons div {
-  transition: all 0.3s ease; 
+  transition: all 0.3s ease;
 }
 
 .interactiveButtons button {
@@ -206,67 +212,82 @@ body::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
 }
 
 .interactiveButtons p {
   color: #39FF14;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 10px;
   transition: all 0.3s ease;
 }
+.interactiveMe {
+  font-size: 2rem;
+  position: absolute;
+  left: 47%; 
+  text-align: center;
+}
 
 .interactiveMe:hover p {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
-.interactiveMe {
-  font-size: 2rem;
-  font-weight: bold;
+.interactiveMe button {
+  width: 130px;
+  height: 130px;
 }
 
 .interactiveMe:hover button {
   background-color: rgba(57, 255, 20, 0.1);
   box-shadow: 0 0 15px rgba(57, 255, 20, 0.8);
-  border: 5px solid #39FF14;
+  border: 3px solid #39FF14;
+}
+
+.interactiveProjects {
+  font-size: 2rem;
+  position: absolute; 
+  top: 125px;     
+  left: 39%;   
+  text-align: left;
 }
 
 .interactiveProjects:hover p {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
+}
+
+.interactiveProjects button {
+  width: 150px;
+  height: 85px;
 }
 
 .interactiveProjects:hover button {
   background-color: rgba(57, 255, 20, 0.1);
   box-shadow: 0 0 15px rgba(57, 255, 20, 0.8);
-  border: 5px solid #39FF14;
+  border: 3px solid #39FF14;
+}
+
+.interactiveStudies {
+  font-size: 2rem;
+  position: absolute; 
+  left: 64%;
+  text-align: center;
 }
 
 .interactiveStudies:hover p {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
+}
+
+.interactiveStudies button {
+  width: 90px;
+  height: 200px;
 }
 
 .interactiveStudies:hover button {
   background-color: rgba(57, 255, 20, 0.1);
   box-shadow: 0 0 15px rgba(57, 255, 20, 0.8);
-  border: 5px solid #39FF14;
-}
-
-.interactiveMe button {
-  width: 200px;
-  height: 200px;
-}
-
-.interactiveProjects button {
-  width: 150px;
-  height: 100px;
-}
-
-.interactiveStudies button {
-  width: 100px;
-  height: 120px;
+  border: 3px solid #39FF14;
 }
 
                     /* FOOTER */
@@ -388,4 +409,88 @@ footer p {
   background-color: #39FF14;
   color: #111111;
   box-shadow: 0 0 10px rgba(57, 255, 20, 0.8);
+}
+
+                    /* CV */
+.cv {
+  background-color: rgba(10, 10, 10, 0.4);
+  box-shadow: 0 0 10px rgba(57, 255, 20, 0.8);
+  max-width: 1200px;
+}
+
+.cv h1, h2, h3 {
+  color: #39FF14; 
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.7);
+}
+
+#percentage {
+  margin-top: 3rem;
+  padding: 20px;
+  text-align: center;
+  color: #39FF14;
+}
+
+#percentage h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.8);
+  letter-spacing: 2px;
+}
+
+.skills-circles {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle svg {
+  width: 120px;
+  height: 120px;
+  transform: rotate(-90deg);
+}
+
+.bg {
+  fill: none;
+  stroke: rgba(57, 255, 20, 0.2);
+  stroke-width: 3;
+}
+
+.progress {
+  fill: none;
+  stroke: #39FF14;
+  stroke-width: 3;
+  stroke-linecap: round;
+  animation: progress-animation 2s ease-in-out forwards;
+}
+
+.percentage {
+  fill: #39FF14;
+  font-size: 0.6em;
+  text-anchor: middle;
+  transform: rotate(90deg);
+  transform-origin: center;
+  font-weight: bold;
+  text-shadow: 0 0 6px rgba(57, 255, 20, 0.7);
+}
+
+.circle span {
+  margin-top: 0.8rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 0 6px rgba(57, 255, 20, 0.7);
+}
+
+/* Animación suave */
+@keyframes progress-animation {
+  0% {
+    stroke-dasharray: 0 100;
+  }
 }

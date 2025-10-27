@@ -1,0 +1,15 @@
+:root {
+  --bs-body-bg: #000;
+  --bs-body-color: #ccc;
+  --bs-primary: #39FF14;
+  --bs-success: #39FF14;
+  --bs-link-color: #39FF14;
+  --bs-link-hover-color: #72ff52;
+  --bs-border-color: rgba(57, 255, 20, 0.4);
+  --bs-btn-border-radius: 0.25rem;
+  --bs-font-sans-serif: 'Lexend Deca', sans-serif;
+}
+
+.btn-outline-success:hover {
+  box-shadow: 0 0 10px rgba(57, 255, 20, 0.8);
+}
